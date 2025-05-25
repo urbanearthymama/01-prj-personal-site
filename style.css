@@ -51,6 +51,22 @@ body {
   color: #666; /* softer color for tagline */
 }
 
+/* Style for the hero image to make it clear and visible */
+.hero-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;         /* Make the image round */
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;           /* Add a white background behind the image */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow for clarity */
+  opacity: 1;                 /* Fully visible */
+  position: relative;
+  z-index: 3;                 /* Make sure it's above the overlay */
+}
+
 /* Style for the bio section */
 .bio {
   max-width: 600px; /* limit width for readability */
@@ -98,6 +114,14 @@ body {
   display: inline-block;      /* Show list items side by side */
   font-size: 1em;
   margin: 0 24px 8px 0;       /* More space between skills */
+  vertical-align: middle;
+}
+
+.skill-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 6px;
 }
 
 /* Style for the footer */
