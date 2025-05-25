@@ -4,8 +4,113 @@
   <meta charset="UTF-8">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Add Bootstrap CSS for the navigation bar -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add Google Material Icons stylesheet in the <head> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Navigation bar using Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <!-- Website name or logo -->
+      <a class="navbar-brand" href="#">Ani Nelson</a>
+      <!-- Button for mobile menu -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Each list item is a navigation link -->
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section: Your name and a short tagline -->
+  <section class="hero">
+    <h1><!-- Your Name Here -->Ani Nelson</h1>
+    <p><!-- Short tagline or welcome message -->Aspiring Web Developer</p>
+  </section>
+
+  <!-- Bio section: A short paragraph about yourself -->
+  <section class="bio" id="about">
+    <h2>About Me</h2>
+    <p>
+      <!-- Write a few sentences about yourself here -->
+      I am a college student learning web development. I enjoy creating simple and clean websites as I build my skills.
+    </p>
+  </section>
+
+  <!-- Skills section: List your web development skills -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <!-- List your skills here -->
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </section>
+
+  <!-- Placeholder sections for Projects and Contact -->
+  <section id="projects" style="max-width:600px;margin:40px auto 0 auto;background:#fff;padding:30px 20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+    <h2>Projects</h2>
+    <p><!-- Add your projects here in the future --></p>
+  </section>
+  <section id="contact" style="max-width:600px;margin:30px auto 40px auto;background:#fff;padding:30px 20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+    <h2>Contact</h2>
+    <p>
+      <!-- Add your email address here -->
+      Email me at
+      <a href="mailto:your.email@example.com">your.email@example.com</a>
+    </p>
+  </section>
+
+  <!-- Footer section: Add your LinkedIn and GitHub links here -->
+  <footer class="footer">
+    <p>
+      Connect with me on
+      <!-- LinkedIn SVG icon and link -->
+      <a href="https://www.linkedin.com/in/pa-nelson/" target="_blank">
+        <!-- Cute LinkedIn SVG icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="vertical-align:middle;margin-right:2px;" viewBox="0 0 24 24" fill="#0077b5">
+          <circle cx="12" cy="12" r="12" fill="#eaf4fb"/>
+          <path d="M17 17h-2.5v-3.5c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5V17H9V10h2.5v1c.4-.6 1.2-1 2-1 1.7 0 3 1.3 3 3V17zM7 8.5C6.2 8.5 5.5 7.8 5.5 7S6.2 5.5 7 5.5 8.5 6.2 8.5 7 7.8 8.5 7 8.5zM8 17H6V10h2v7z" fill="#0077b5"/>
+        </svg>
+        LinkedIn
+      </a>
+      &nbsp;|&nbsp;
+      <!-- GitHub SVG icon and link -->
+      <a href="https://github.com/urbanearthymama" target="_blank">
+        <!-- Cute GitHub SVG icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="vertical-align:middle;margin-right:2px;" viewBox="0 0 24 24" fill="#333">
+          <circle cx="12" cy="12" r="12" fill="#f5f5f5"/>
+          <path d="M12 4a8 8 0 0 0-2.5 15.6c.4.1.5-.2.5-.4v-1.3c-2 .4-2.5-.5-2.7-1-.1-.3-.5-1-.8-1.2-.3-.2-.7-.7 0-.7.6 0 1 .6 1.1.8.7 1.2 1.8.8 2.2.6.1-.5.3-.8.5-1-1.8-.2-3.7-.9-3.7-4a3.1 3.1 0 0 1 .8-2.2c-.1-.2-.4-1 .1-2 0 0 .7-.2 2.3.8a7.7 7.7 0 0 1 4.2 0c1.6-1 2.3-.8 2.3-.8.5 1 .2 1.8.1 2a3.1 3.1 0 0 1 .8 2.2c0 3.1-1.9 3.8-3.7 4 .3.2.5.6.5 1v1.5c0 .2.1.5.5.4A8 8 0 0 0 12 4z"/>
+        </svg>
+        GitHub
+      </a>
+    </p>
+  </footer>
+
+  <!-- Add Bootstrap JS for navbar functionality (optional, for mobile menu) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

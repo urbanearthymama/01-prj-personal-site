@@ -1,1 +1,136 @@
 /* Add you CSS here */
+
+/* Set a clean background color and basic font for the whole page */
+body {
+  background-color: #f9f9f9; /* light gray background */
+  font-family: Arial, Helvetica, sans-serif; /* easy-to-read font */
+  color: #222; /* dark text for good contrast */
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section with background image and light overlay */
+.hero {
+  position: relative; /* Needed for overlay */
+  background-image: url('img/hero-bg.jpg');
+  background-size: cover; /* Cover the whole section */
+  background-position: center;
+  text-align: center; /* center the text */
+  padding: 60px 20px 40px 20px; /* space around content */
+  border-bottom: 1px solid #eee; /* subtle line below */
+  color: #222; /* Default text color */
+  z-index: 1;
+  /* Add minimum height for better appearance */
+  min-height: 250px;
+}
+
+/* Overlay for the hero section */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.7); /* Light white overlay */
+  z-index: 2;
+}
+
+/* Make sure hero text is above the overlay */
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h1 {
+  font-size: 2.5em; /* large name */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #666; /* softer color for tagline */
+}
+
+/* Style for the bio section */
+.bio {
+  max-width: 600px; /* limit width for readability */
+  margin: 40px auto 0 auto; /* center on page with space above */
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px; /* slightly rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03); /* soft shadow */
+}
+
+.bio h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.bio p {
+  font-size: 1em;
+  color: #444;
+}
+
+/* Style for the skills section */
+.skills {
+  max-width: 600px;
+  margin: 30px auto 40px auto;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.skills h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+/* Remove bullet points from the skills list */
+.skills ul {
+  list-style-type: none; /* No bullets */
+  padding-left: 0;       /* Remove left padding */
+  text-align: center;    /* Center the list items */
+}
+
+/* Display skills in a row */
+.skills li {
+  display: inline-block;      /* Show list items side by side */
+  font-size: 1em;
+  margin: 0 24px 8px 0;       /* More space between skills */
+}
+
+/* Style for the footer */
+.footer {
+  text-align: center; /* center the text */
+  padding: 20px 0; /* space above and below */
+  background-color: #fff; /* match other sections */
+  border-top: 1px solid #eee; /* subtle line above */
+  margin-top: 40px; /* space above footer */
+  font-size: 1em;
+}
+
+.footer a {
+  color: #0077b5; /* LinkedIn blue */
+  text-decoration: none; /* remove underline */
+  font-weight: bold;
+  margin: 0 5px; /* space between links */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* underline on hover */
+}
+
+/* Style Material Icons in the footer */
+.footer .material-icons {
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+
+/* Add a little space between sections on small screens */
+@media (max-width: 600px) {
+  .bio, .skills {
+    padding: 20px 10px;
+  }
+}
